@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="個人情報"
+        android:textSize="32sp" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/ID"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/welcomeText"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:hint="ID:"-->
+<!--        android:inputType="textEmailAddress" />-->
+
+    <TextView
+        android:id="@+id/textPersonName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_marginTop="25dp"
+        android:hint="氏名:"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/DateOfBirth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textPersonName"
+        android:layout_marginTop="25dp"
+        android:hint="生年月日:"
+        android:inputType="text" />
+
+    <TextView
+        android:id="@+id/EmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/DateOfBirth"
+        android:layout_marginTop="25dp"
+        android:hint="メールアドレス:"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/Password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/EmailAddress"
+        android:layout_marginTop="25dp"
+        android:hint="パスワード"
+        android:inputType="textPassword" />
+
+    <TextView
+        android:id="@+id/medicine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="現在服薬中の薬:"
+        android:inputType="text"
+        android:layout_below="@id/Password"
+        android:layout_marginTop="25dp" />
+
+    <Button
+        android:id="@+id/editButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="130dp"
+        android:text="編集"
+        android:textSize="24dp" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="379dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="600dp"
+        app:menu="@menu/bottom_nav_menu" />
+</RelativeLayout>
+
