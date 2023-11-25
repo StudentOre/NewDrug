@@ -11,15 +11,15 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="確認画面"
-        android:textSize="32sp"/>
+        android:textSize="40sp" />
 
 
     <ImageButton
         android:id="@+id/ImageButton"
         android:layout_width="36dp"
         android:layout_height="47dp"
-        android:layout_marginTop="5dp"
         android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
         android:background="?android:attr/selectableItemBackground"
         android:contentDescription="ImageButton"
         android:src="@drawable/baseline_reply_24" />
@@ -29,23 +29,19 @@
         android:id="@+id/EmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
         android:layout_marginTop="150dp"
-        android:text="メールアドレス"/>
+        android:layout_marginBottom="25dp"
+        android:text="メールアドレス:"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="25dp"
         android:layout_marginTop="200dp"
-        android:text="パスワード"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:text="パスワードを忘れた方はこちら"/>
+        android:layout_marginBottom="25dp"
+        android:text="パスワード:"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/confButton"

@@ -11,25 +11,27 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="編集画面"
-        android:textSize="32sp" />
+        android:textSize="40sp" />
 
-    <TextView
-        android:id="@+id/ID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/welcomeText"
-        android:layout_marginTop="25dp"
-        android:hint="ID:"
-        android:inputType="textEmailAddress" />
+<!--    <TextView-->
+<!--        android:id="@+id/ID"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/welcomeText"-->
+<!--        android:layout_marginTop="25dp"-->
+<!--        android:hint="ID:"-->
+<!--        android:inputType="textEmailAddress" -->
+<!--        android:textSize="20sp" />-->
 
     <TextView
         android:id="@+id/textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/ID"
+        android:layout_below="@id/welcomeText"
         android:layout_marginTop="25dp"
         android:hint="氏名:"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/DateOfBirth"
@@ -38,7 +40,8 @@
         android:layout_below="@id/textPersonName"
         android:layout_marginTop="25dp"
         android:hint="生年月日:"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/EmailAddress"
@@ -47,7 +50,8 @@
         android:layout_below="@id/DateOfBirth"
         android:layout_marginTop="25dp"
         android:hint="メールアドレス:"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/Password"
@@ -65,7 +69,8 @@
         android:hint="現在服薬中の薬:"
         android:inputType="text"
         android:layout_below="@id/Password"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/nextButton"

@@ -2,17 +2,16 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="110dp"
         android:text="飲み合わせ"
-        android:textSize="26sp"
-        android:textStyle="bold" />
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/welcomeText" />
 
     <ImageButton
         android:id="@+id/ImageButton"
@@ -27,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/welcomeText"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="56dp"
         android:orientation="horizontal">
 
         <TextView
@@ -36,8 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="薬の名前"
-            android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/detailMedicationTime"
@@ -46,7 +44,7 @@
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:text="投与時間"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <TextView
             android:id="@+id/detailMedicationNote"
@@ -55,7 +53,7 @@
             android:layout_marginStart="16dp"
             android:layout_weight="1"
             android:text="備考"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
     </LinearLayout>
 
     <TextView

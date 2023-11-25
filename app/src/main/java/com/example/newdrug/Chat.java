@@ -60,26 +60,26 @@ public class Chat extends AppCompatActivity {
         });
 
         // 薬についてのボタンの処理
-//        Button medicineButton = findViewById(R.id.medicalChatButton);
-//        medicineButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // 薬についてのチャット画面に遷移
-//                Intent intent = new Intent(Chat.this, MedicalChat.class);
-//                startActivity(intent);
-//            }
-//        });
-//
-//        // 病院についてのボタンの処理
-//        Button hospitalButton = findViewById(R.id.chemistChatButton);
-//        hospitalButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                // 病院についてのチャット画面に遷移
-//                Intent intent = new Intent(Chat.this, ChemistChat.class);
-//                startActivity(intent);
-//            }
-//        });
+        Button medicineButton = findViewById(R.id.medicalChatButton);
+        medicineButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 薬についてのチャット画面に遷移
+                Intent intent = new Intent(Chat.this, MedicalChat.class);
+                startActivity(intent);
+            }
+        });
+
+        // 病院についてのボタンの処理
+        Button hospitalButton = findViewById(R.id.chemistChatButton);
+        hospitalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // 病院についてのチャット画面に遷移
+                Intent intent = new Intent(Chat.this, ChemistChat.class);
+                startActivity(intent);
+            }
+        });
     }
 }
 

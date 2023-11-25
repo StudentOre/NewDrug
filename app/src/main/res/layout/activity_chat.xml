@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="お薬飲めたね"
-        android:textSize="32sp"
+        android:textSize="40sp"
         tools:ignore="MissingConstraints" />
 
     <Button

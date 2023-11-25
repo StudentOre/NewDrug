@@ -37,7 +37,7 @@
             android:name=".Notice"
             android:exported="false" />
         <activity
-            android:name=".PersonalChange"
+            android:name=".PersonalComp"
             android:exported="false" />
         <activity
             android:name=".PersonalConf"

@@ -1,64 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:padding="16dp">
 
+    <!-- 背景のImageView -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/back_image" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="お薬飲めたね"
-        android:textSize="32sp"
-        android:layout_centerHorizontal="true"
         android:id="@+id/welcomeText"
-        tools:ignore="MissingConstraints" />
-
-    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="お薬手帳"
-        android:id="@+id/MedicineBookButton"
-        android:textSize="24sp"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/welcomeText"
-        android:layout_marginTop="40dp"
+        android:text="お薬飲めたね"
+        android:textSize="40sp"
         tools:ignore="MissingConstraints" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="チャット"
-        android:id="@+id/ChatButton"
-        android:textSize="24sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/MedicineBookButton"
-        android:layout_marginTop="40dp"
-        tools:ignore="MissingConstraints" />
+<!--    <Button-->
+<!--        android:id="@+id/MedicineBookButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/welcomeText"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="お薬手帳"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="連絡事項"
-        android:id="@+id/ContactButton"
-        android:textSize="24sp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/ChatButton"
-        android:layout_marginTop="40dp"
-        tools:ignore="MissingConstraints" />
+<!--    <Button-->
+<!--        android:id="@+id/ChatButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/MedicineBookButton"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="チャット"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:ignore="MissingConstraints" />-->
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="個人情報"
-        android:id="@+id/PersonalInformationButton"
-        android:textSize="24sp"
+<!--    <Button-->
+<!--        android:id="@+id/ContactButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ChatButton"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="連絡事項"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/PersonalInformationButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@id/ContactButton"-->
+<!--        android:layout_centerHorizontal="true"-->
+<!--        android:layout_marginTop="40dp"-->
+<!--        android:text="個人情報"-->
+<!--        android:textSize="24sp"-->
+<!--        tools:ignore="MissingConstraints" />-->
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="379dp"
+        android:layout_height="65dp"
+        android:layout_below="@+id/welcomeText"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/ContactButton"
-        android:layout_marginTop="40dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginTop="600dp"
+        app:menu="@menu/bottom_nav_menu" />
+
 
 
 </RelativeLayout>

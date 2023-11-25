@@ -13,8 +13,7 @@
         android:layout_height="wrap_content"
         android:text="お薬手帳"
         android:layout_centerHorizontal="true"
-        android:textSize="24sp"
-        android:textStyle="bold"/>
+        android:textSize="40sp" />
 
     <ImageButton
         android:id="@+id/ImageButton"

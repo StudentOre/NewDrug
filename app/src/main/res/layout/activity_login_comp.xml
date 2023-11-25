@@ -5,30 +5,30 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="お薬飲めたね"
-        android:textSize="32sp"
         android:layout_centerHorizontal="true"
-        android:id="@+id/welcomeText" />
+        android:text="お薬飲めたね"
+        android:textSize="40sp" />
 
     <TextView
+        android:id="@+id/LoginCompText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ログイン完了"
-        android:textSize="24sp"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/welcomeText"
-        android:id="@+id/LoginCompText" />
+        android:layout_centerHorizontal="true"
+        android:text="ログイン完了"
+        android:textSize="24sp" />
 
     <Button
+        android:id="@+id/homeBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ホームに戻る"
-        android:id="@+id/homeBackButton"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/LoginCompText"
-        android:layout_marginTop="20dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="ホームに進む" />
 
 
 </RelativeLayout>

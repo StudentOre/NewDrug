@@ -2,32 +2,43 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="お薬飲めたね"
-        android:textSize="32sp"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/welcomeText" />
+<!--   背景に画像を埋め込むrelative？に埋め込んだほうがいい？-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/top_image" />
 
     <TextView
+        android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="利用者アカウント"
-        android:textSize="24sp"
         android:layout_centerHorizontal="true"
+        android:text="お薬飲めたね"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/accountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@id/welcomeText"
-        android:id="@+id/accountText" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="利用者アカウント"
+        android:textSize="24sp" />
 
     <Button
+        android:id="@+id/LoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ログイン"
-        android:id="@+id/LoginButton"
-        android:layout_centerHorizontal="true"
         android:layout_below="@id/accountText"
-        android:layout_marginTop="20dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:text="ログイン" />
+
 
 </RelativeLayout>

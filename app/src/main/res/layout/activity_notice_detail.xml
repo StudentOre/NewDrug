@@ -10,7 +10,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="Title"
-        android:textSize="24sp" />
+        android:textSize="40sp" />
 
     <ImageButton
         android:id="@+id/ImageButton"
@@ -27,17 +27,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/titleTextView"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Content"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/contentTextView"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:text="Date"
-        android:textSize="16sp" />
+        android:textSize="20sp" />
 
 </RelativeLayout>

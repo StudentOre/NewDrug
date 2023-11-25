@@ -79,7 +79,7 @@ public class PersonalConf extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // 最終画面に遷移
-                Intent intentChange = new Intent(PersonalConf.this, PersonalChange.class);
+                Intent intentChange = new Intent(PersonalConf.this, PersonalComp.class);
                 startActivity(intentChange);
             }
         });
