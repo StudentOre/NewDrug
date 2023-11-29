@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
 
@@ -98,6 +99,15 @@ public class MainActivity extends AppCompatActivity {
                 // ImageButtonがクリックされた時の処理をここに記述
                 // 例: トーストメッセージを表示
                 finish();
+            }
+        });
+
+        Button confButton = findViewById(R.id.confButton);
+        confButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, GraphActivity.class);
+                startActivity(intent);
             }
         });
     }
