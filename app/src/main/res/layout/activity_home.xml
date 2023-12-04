@@ -23,6 +23,17 @@
         android:textSize="40sp"
         tools:ignore="MissingConstraints" />
 
+    <Button
+        android:id="@+id/PhotoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcomeText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:text="写真"
+        android:textSize="24sp"
+        tools:ignore="MissingConstraints" />
+
 <!--    <Button-->
 <!--        android:id="@+id/MedicineBookButton"-->
 <!--        android:layout_width="wrap_content"-->

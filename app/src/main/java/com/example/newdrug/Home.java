@@ -3,6 +3,7 @@ package com.example.newdrug;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -55,5 +56,17 @@ public class Home extends AppCompatActivity {
                 return false;
             }
         });
+
+        Button photoButton = findViewById(R.id.PhotoButton); // 写真ボタンを取得
+        // 写真ボタンが押されたときの処理
+        photoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("PhotoButton", "写真ボタンがクリックされました"); // ログにメッセージを表示
+                Intent intent = new Intent(Home.this, CameraX.class);
+                startActivity(intent); // ページ遷移
+            }
+        });
+
     }
 }
