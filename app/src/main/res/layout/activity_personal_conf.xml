@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/top_image">
 
     <TextView
         android:id="@+id/welcomeText"
@@ -12,7 +13,6 @@
         android:layout_centerHorizontal="true"
         android:text="確認画面"
         android:textSize="40sp" />
-
 
     <ImageButton
         android:id="@+id/ImageButton"
@@ -24,8 +24,7 @@
         android:contentDescription="ImageButton"
         android:src="@drawable/baseline_reply_24" />
 
-
-    <TextView
+    <EditText
         android:id="@+id/EmailAddress"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -34,7 +33,7 @@
         android:text="メールアドレス:"
         android:textSize="20sp" />
 
-    <TextView
+    <EditText
         android:id="@+id/Password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -45,11 +44,12 @@
 
     <Button
         android:id="@+id/confButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="169dp"
+        android:layout_height="73dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="300dp"
         android:text="確定"
+        android:backgroundTint="#F48E27"
         android:textSize="20dp" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView

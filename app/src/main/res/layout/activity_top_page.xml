@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="16dp">
+    android:padding="16dp"
+    android:background="@drawable/top_image"> <!-- Set the background here -->
 
-<!--   背景に画像を埋め込むrelative？に埋め込んだほうがいい？-->
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/top_image" />
-
+    <!-- 「お薬飲めたね」の文字を太字に変更 -->
     <TextView
         android:id="@+id/welcomeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:text="お薬飲めたね"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+       />
+
+    <!-- 利用者アカウントメッセージ -->
+
+    <!-- ログインボタン -->
 
     <TextView
         android:id="@+id/accountText"
@@ -27,18 +27,18 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/welcomeText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="75dp"
         android:text="利用者アカウント"
-        android:textSize="24sp" />
+        android:textColor="#240909"
+        android:textSize="28sp" />
 
     <Button
         android:id="@+id/LoginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="169dp"
+        android:layout_height="73dp"
         android:layout_below="@id/accountText"
+        android:layout_marginTop="143dp"
+        android:backgroundTint="#F48E27"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
         android:text="ログイン" />
-
-
 </RelativeLayout>
