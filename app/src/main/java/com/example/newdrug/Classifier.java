@@ -67,7 +67,7 @@ public class Classifier {
         int inputChannels = inputShape[3];
 
         // モデルの入力バッファを作成し、サイズを設定
-        TensorBuffer inputBuffer = TensorBuffer.createFixedSize(new int[]{1, modelHeight, modelWidth, 3}, DataType.FLOAT32);
+        TensorBuffer inputBuffer = TensorBuffer.createFixedSize(new int[]{1, modelHeight, modelWidth, inputChannels}, DataType.FLOAT32);
 
 // BitmapからTensorImageを作成
         TensorImage tensorImage = new TensorImage(DataType.FLOAT32);
@@ -75,34 +75,38 @@ public class Classifier {
 // BitmapをTensorImageにロード
         tensorImage.load(bitmap);
 
+
 // 画像処理を行い、モデルの入力サイズに合わせてリサイズ
         ImageProcessor imageProcessor = new ImageProcessor.Builder()
                 .add(new ResizeOp(modelHeight, modelWidth, ResizeOp.ResizeMethod.BILINEAR))
+                .add(new NormalizeOp(0f, 1f))
                 .add(new Rot90Op(rotation))
                 .build();
         tensorImage = imageProcessor.process(tensorImage);
-
-// モデルを実行
-        if (null != tflite) {
-            tflite.run(tensorImage.getBuffer(), inputBuffer.getBuffer());
-        }
-
 
         // 出力TensorBufferのサイズをモデルの出力サイズに合わせて設定
         int[] outputShape = tflite.getOutputTensor(0).shape();
         TensorBuffer outputBuffer = TensorBuffer.createFixedSize(outputShape, DataType.FLOAT32);
 
-        // モデルの出力データを正規化します。
-        TensorProcessor probabilityProcessor = new TensorProcessor.Builder().add(new NormalizeOp(0, 255)).build();
-        outputBuffer = probabilityProcessor.process(outputBuffer);
-
-        // 結果を解析してラベルとその確率を取得します。
-        String result = " ";
-        if (null != associatedAxisLabels) {
-            TensorLabel labels = new TensorLabel(associatedAxisLabels, outputBuffer);
-            Map<String, Float> floatMap = labels.getMapWithFloatValue();
-            result = Utils.writeResults(floatMap);
+// モデルを実行
+        if (null != tflite) {
+            tflite.run(tensorImage.getBuffer(), outputBuffer.getBuffer());
         }
+
+        float[] probabilities = outputBuffer.getFloatArray();
+        int maxIndex = -1;
+        float maxProbability = 0;
+
+        for (int i = 0; i < probabilities.length; i++) {
+            if (probabilities[i] > maxProbability) {
+                maxProbability = probabilities[i];
+                maxIndex = i;
+            }
+        }
+
+        String mostLikelyLabel = associatedAxisLabels.get(maxIndex);
+        String result = mostLikelyLabel + ": " + maxProbability;
+
         return result;
     }
 }
