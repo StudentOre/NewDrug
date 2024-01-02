@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/home"
+        android:src="@drawable/top_image"
         tools:ignore="ContentDescription" />
 
     <TextView
@@ -35,50 +35,6 @@
         android:text="写真"
         android:textSize="24sp"
         tools:ignore="MissingConstraints" />
-
-<!--    <Button-->
-<!--        android:id="@+id/MedicineBookButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/welcomeText"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:text="お薬手帳"-->
-<!--        android:textSize="24sp"-->
-<!--        tools:ignore="MissingConstraints" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/ChatButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/MedicineBookButton"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:text="チャット"-->
-<!--        android:textSize="24sp"-->
-<!--        tools:ignore="MissingConstraints" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/ContactButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/ChatButton"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:text="連絡事項"-->
-<!--        android:textSize="24sp"-->
-<!--        tools:ignore="MissingConstraints" />-->
-
-<!--    <Button-->
-<!--        android:id="@+id/PersonalInformationButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_below="@id/ContactButton"-->
-<!--        android:layout_centerHorizontal="true"-->
-<!--        android:layout_marginTop="40dp"-->
-<!--        android:text="個人情報"-->
-<!--        android:textSize="24sp"-->
-<!--        tools:ignore="MissingConstraints" />-->
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigationView"

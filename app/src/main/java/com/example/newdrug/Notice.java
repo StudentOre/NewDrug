@@ -48,6 +48,11 @@ public class Notice extends AppCompatActivity {
                     Intent intent4 = new Intent(Notice.this, PersonalInformation.class);
                     startActivity(intent4);
                     return true;
+                }else if (itemId == R.id.navigation_home) {
+                    // homeに遷移
+                    Intent intent5 = new Intent(Notice.this, Home.class);
+                    startActivity(intent5);
+                    return true;
                 }
                 return false;
             }

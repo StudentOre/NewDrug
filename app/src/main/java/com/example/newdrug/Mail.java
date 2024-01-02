@@ -47,6 +47,11 @@ public class Mail extends AppCompatActivity {
                     Intent intent4 = new Intent(Mail.this, PersonalInformation.class);
                     startActivity(intent4);
                     return true;
+                }else if (itemId == R.id.navigation_home) {
+                    // homeに遷移
+                    Intent intent5 = new Intent(Mail.this, Home.class);
+                    startActivity(intent5);
+                    return true;
                 }
                 return false;
             }
